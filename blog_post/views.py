@@ -9,4 +9,5 @@ def home(request):
 
 def post_list(request):
     post_list = Post.objects.all()
-    return render(request, post_list.html, {'post_list' : post_list()})
+    return render(request, 'post_list.html', {'post_list':post_list})
+
