@@ -20,6 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     url(r'^home/$', views.home, name='home'),
-    #url(r'^post_list/', views.post_list, name='post_list')
+    #url(r'^post_list/', views.post_list, name='post_list'),
     url(r'^post_list/', include('blog_post.urls'))
 ]
