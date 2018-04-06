@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^home/', views.home, name='home'),
     #   url(r'^post_list/', views.post_list, name='post_list'),
     url(r'^post_list/', include('blog_post.urls')),
-    url(r'^single_post/(?P<post_id>[0-9]+)/', views.single_post, name='single_post'),
+    url(r'^single_post/(?P<pk>[0-9]+)/', views.single_post, name='single_post'),
     url(r'^users/', include('Profiles.urls'))
 ]
