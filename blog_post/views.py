@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Post
-
+from django.shortcuts import get_object_or_404
 
 def home(request):
     all_post = Post.objects.all()
@@ -13,7 +13,7 @@ def post_list(request):
 
 
 def single_post(request, pk):
-    post = Post.objects.get(pk=pk)
-    #post = get_object_or_404(Post, pk=pk)
+    #   post = Post.objects.get(pk=pk)
+    post = get_object_or_404(Post, pk=pk)
     #print("the post is " , post)
     return render(request, 'single_post.html', {'post': post})
