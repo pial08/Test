@@ -12,7 +12,8 @@ def post_list(request):
     return render(request, 'post_list.html', {'post_list':post_list})
 
 
-def single_post(request):
-    post = Post.objects.get(pk=3)
-    print(post)
+def single_post(request, pk):
+    post = Post.objects.get(pk=pk)
+    #post = get_object_or_404(Post, pk=pk)
+    #print("the post is " , post)
     return render(request, 'single_post.html', {'post': post})
